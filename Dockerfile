@@ -22,8 +22,11 @@ FROM quay.io/codait/max-base:v1.5.0
 
 ARG use_pre_trained_model=true
 
+RUN python -m pip install --upgrade pip
 COPY requirements.txt .
 RUN pip install -r requirements.txt
+
+
 
 COPY . .
 
